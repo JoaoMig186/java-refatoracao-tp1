@@ -10,10 +10,10 @@ public class ItemUpdaterFactory {
         updaters.put("Aged Brie", new AgedBrieUpdater());
         updaters.put("Backstage passes to a TAFKAL80ETC concert", new BackstagePassUpdater());
         updaters.put("Sulfuras, Hand of Ragnaros", new SulfurasUpdater());
+        updaters.put("Conjured", new ConjuredItemUpdater());
     }
 
     public static ItemUpdater getUpdater(Item item) {
         return updaters.getOrDefault(item.name, new DefaultUpdater());
     }
 }
-
